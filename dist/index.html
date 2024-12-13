@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script defer src="script.js"></script>
+  <title>product</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="container mx-auto p-6">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-5 items-center">
+      <!-- Left Side - Product Images -->
+      <div class="left-side">
+        <img id="product-image" src="./assets/img/product-red.jpg" alt="Product" class="rounded-lg shadow-lg">
+      </div>
+      <!-- Right Side - Product Details -->
+      <div class="right-side">
+        <h1 class="text-[40px] font-bold text-[#364A63] leading-10">Classy Modern Smart watch</h1>
+        <div class="star flex items-center gap-x-1 mt-[20px] mb-[20px]">
+          <img src="./assets/img/star-fill.svg" alt="">
+          <img src="./assets/img/star-fill.svg" alt="">
+          <img src="./assets/img/star-fill.svg" alt="">
+          <img src="./assets/img/star-fill.svg" alt="">
+          <img src="./assets/img/star-half-fill.svg" alt="">
+          <img src="./assets/img/star.svg" alt="">
+        </div>
+        <p class="text-[#8091A7] text-[18px] leading-8 mb-[20px]">I must explain to you how all this mistaken idea of
+          denoun cing ple praising pain
+          was born and I will give you a complete account of the system, and expound the actual teaching.</p>
+        <div class="flex items-center gap-x-11 mb-[20px]">
+          <div>
+            <p class="text-[14px] font-normal leading-6 text-[#8091A7]">Type</p>
+            <h6 class="text-[16px] font-bold leading-6 text-[#364A63]">Watch</h6>
+          </div>
+          <div>
+            <p class="text-[14px] font-normal leading-6 text-[#8091A7]">Model Number</p>
+            <h6 class="text-[16px] font-bold leading-6 text-[#364A63]">Forerunner 290XT</h6>
+          </div>
+        </div>
+        <div class="mt-4">
+          <p class="text-[18px] font-bold leading-5 text-[#364A63] mb-[20px]">Band Color</p>
+          <div id="color-buttons" class="flex gap-2">
+            <button data-color="red" class="color-btn bg-red-500 w-8 h-8 rounded-full border"></button>
+            <button data-color="blue" class="color-btn bg-blue-500 w-8 h-8 rounded-full border"></button>
+            <button data-color="green" class="color-btn bg-green-500 w-8 h-8 rounded-full border"></button>
+          </div>
+        </div>
+        <div class="mt-4">
+          <p class="text-[18px] font-bold leading-5 text-[#364A63] mb-[20px]">Wrist Size</p>
+          <div class="flex gap-2">
+            <button class="active-btn-b px-[18px] py-[8px] border border-[#DBDFEA] text-[#8091A7] rounded-[4px] text-[12px] font-normal group hover:border-[#6576FF]">
+              <span class="font-bold text-[#364A63] group-hover:text-[#6576FF] active-btn">S</span> 
+              $69
+            </button>
+            <button class="px-[18px] py-[8px] border border-[#DBDFEA] text-[#8091A7] rounded-[4px] text-[12px] font-normal group hover:border-[#6576FF]">
+              <span class="font-bold text-[#364A63] group-hover:text-[#6576FF]">M</span> 
+              $79
+            </button>
+            <button class="px-[18px] py-[8px] border border-[#DBDFEA] text-[#8091A7] rounded-[4px] text-[12px] font-normal group hover:border-[#6576FF]">
+              <span class="font-bold text-[#364A63] group-hover:text-[#6576FF]">L</span> 
+              $89
+            </button>
+            <button class="px-[18px] py-[8px] border border-[#DBDFEA] text-[#8091A7] rounded-[4px] text-[12px] font-normal group hover:border-[#6576FF]">
+              <span class="font-bold text-[#364A63] group-hover:text-[#6576FF]">XL</span> 
+              $99
+            </button>
+          </div>
+        </div>
+        <div class="mt-4">
+          <p class="text-[18px] font-bold leading-5 text-[#364A63] mb-[20px]">Wrist Size</p>
+          <div class="flex items-center gap-x-3">
+            <div class="flex items-center border border-[#DBDFEA]">
+              <button id="decrease-btn" class="border-r border-r-[#DBDFEA] w-[30px] py-[5px]">-</button>
+              <span id="quantity" class="mx-4">1</span>
+              <button id="increase-btn" class="border-l border-l-[#DBDFEA] w-[30px] py-[5px]">+</button>
+            </div>
+            <div>
+              <button id="add-to-cart-btn" class="bg-[#6576FF] text-white text-[13px] font-bold leading-5 px-[18px] py-[8px] rounded">Add to Cart</button>
+            </div>
+            <div>
+              <button><img src="./assets/img/fav.png" alt=""></button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal -->
+  <div id="cart-modal" class="hidden fixed inset-0 bg-gray-900 bg-opacity-50 flex items-center justify-center">
+    <div class="bg-white rounded-lg p-6 w-1/2 relative">
+      <h2 class="text-xl font-bold mb-4">Cart</h2>
+      <ul id="cart-items"></ul>
+      <button id="close-modal" class="absolute top-2 right-2 text-gray-500">X</button>
+    </div>
+  </div>
+</body>
+
+</html>

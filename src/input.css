@@ -1,0 +1,16 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.color-btn:hover, .size-btn:hover {
+    outline: 2px solid #000;
+  }
+
+  .active-btn{
+    color: #6576FF;
+  }
+
+  .active-btn-b{
+    border-color: #6576FF;
+  }
+  
